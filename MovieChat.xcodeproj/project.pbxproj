@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,11 +13,28 @@
 		9BAB846223783BAD00CFA657 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BAB846023783BAD00CFA657 /* Main.storyboard */; };
 		9BAB846423783BAD00CFA657 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BAB846323783BAD00CFA657 /* Assets.xcassets */; };
 		9BAB846723783BAD00CFA657 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BAB846523783BAD00CFA657 /* LaunchScreen.storyboard */; };
+		9BAB8470237844D100CFA657 /* ServicesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAB846F237844D100CFA657 /* ServicesManager.swift */; };
+		9BAB84752378465D00CFA657 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAB84742378465D00CFA657 /* Movie.swift */; };
+		9BAB849723784E7B00CFA657 /* MovieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAB849623784E7B00CFA657 /* MovieTests.swift */; };
+		9BAB849A23784F2200CFA657 /* ServicesManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAB849923784F2200CFA657 /* ServicesManagerTests.swift */; };
+		E18151AD64374B87EDAD953F /* Pods_MovieChatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE4AA8F9F84D9C85119D977 /* Pods_MovieChatTests.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9BAB848F23784DFC00CFA657 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9BAB845123783BAD00CFA657 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9BAB845823783BAD00CFA657;
+			remoteInfo = MovieChat;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3CAD7D4C09742153B1AE0559 /* Pods-MovieChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieChat.debug.xcconfig"; path = "Target Support Files/Pods-MovieChat/Pods-MovieChat.debug.xcconfig"; sourceTree = "<group>"; };
+		6DE4AA8F9F84D9C85119D977 /* Pods_MovieChatTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieChatTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7675AE8DD495452A6CADA277 /* Pods-MovieChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieChat.release.xcconfig"; path = "Target Support Files/Pods-MovieChat/Pods-MovieChat.release.xcconfig"; sourceTree = "<group>"; };
+		7D0BEA3F2716BB19119A2D4A /* Pods-MovieChatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieChatTests.release.xcconfig"; path = "Target Support Files/Pods-MovieChatTests/Pods-MovieChatTests.release.xcconfig"; sourceTree = "<group>"; };
 		9556B704C5D0E15F0752497F /* Pods_MovieChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BAB845923783BAD00CFA657 /* MovieChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BAB845C23783BAD00CFA657 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +43,14 @@
 		9BAB846323783BAD00CFA657 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9BAB846623783BAD00CFA657 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9BAB846823783BAD00CFA657 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BAB846F237844D100CFA657 /* ServicesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesManager.swift; sourceTree = "<group>"; };
+		9BAB84742378465D00CFA657 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		9BAB847F23784B5B00CFA657 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BAB848A23784DFC00CFA657 /* MovieChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BAB848E23784DFC00CFA657 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BAB849623784E7B00CFA657 /* MovieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTests.swift; sourceTree = "<group>"; };
+		9BAB849923784F2200CFA657 /* ServicesManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesManagerTests.swift; sourceTree = "<group>"; };
+		DB840A02CC34F839B7EE9B53 /* Pods-MovieChatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieChatTests.debug.xcconfig"; path = "Target Support Files/Pods-MovieChatTests/Pods-MovieChatTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +62,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9BAB848723784DFC00CFA657 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E18151AD64374B87EDAD953F /* Pods_MovieChatTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -45,8 +78,9 @@
 			children = (
 				3CAD7D4C09742153B1AE0559 /* Pods-MovieChat.debug.xcconfig */,
 				7675AE8DD495452A6CADA277 /* Pods-MovieChat.release.xcconfig */,
+				DB840A02CC34F839B7EE9B53 /* Pods-MovieChatTests.debug.xcconfig */,
+				7D0BEA3F2716BB19119A2D4A /* Pods-MovieChatTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -54,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				9556B704C5D0E15F0752497F /* Pods_MovieChat.framework */,
+				6DE4AA8F9F84D9C85119D977 /* Pods_MovieChatTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -61,7 +96,9 @@
 		9BAB845023783BAD00CFA657 = {
 			isa = PBXGroup;
 			children = (
+				9BAB847F23784B5B00CFA657 /* Alamofire.framework */,
 				9BAB845B23783BAD00CFA657 /* MovieChat */,
+				9BAB848B23784DFC00CFA657 /* MovieChatTests */,
 				9BAB845A23783BAD00CFA657 /* Products */,
 				353F24935BCF9F7DE7F8EDFE /* Pods */,
 				5647B28346E05827D20A7E07 /* Frameworks */,
@@ -72,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				9BAB845923783BAD00CFA657 /* MovieChat.app */,
+				9BAB848A23784DFC00CFA657 /* MovieChatTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -79,6 +117,7 @@
 		9BAB845B23783BAD00CFA657 /* MovieChat */ = {
 			isa = PBXGroup;
 			children = (
+				9BAB846E23783DC100CFA657 /* Business */,
 				9BAB845C23783BAD00CFA657 /* AppDelegate.swift */,
 				9BAB845E23783BAD00CFA657 /* ViewController.swift */,
 				9BAB846023783BAD00CFA657 /* Main.storyboard */,
@@ -87,6 +126,65 @@
 				9BAB846823783BAD00CFA657 /* Info.plist */,
 			);
 			path = MovieChat;
+			sourceTree = "<group>";
+		};
+		9BAB846E23783DC100CFA657 /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				9BAB84722378464100CFA657 /* Managers */,
+				9BAB84732378464700CFA657 /* Models */,
+			);
+			path = Business;
+			sourceTree = "<group>";
+		};
+		9BAB84722378464100CFA657 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				9BAB846F237844D100CFA657 /* ServicesManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		9BAB84732378464700CFA657 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9BAB84742378465D00CFA657 /* Movie.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9BAB848B23784DFC00CFA657 /* MovieChatTests */ = {
+			isa = PBXGroup;
+			children = (
+				9BAB849423784E0400CFA657 /* Business */,
+				9BAB848E23784DFC00CFA657 /* Info.plist */,
+			);
+			path = MovieChatTests;
+			sourceTree = "<group>";
+		};
+		9BAB849423784E0400CFA657 /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				9BAB849823784EFA00CFA657 /* Managers */,
+				9BAB849523784E1700CFA657 /* Model */,
+			);
+			path = Business;
+			sourceTree = "<group>";
+		};
+		9BAB849523784E1700CFA657 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9BAB849623784E7B00CFA657 /* MovieTests.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9BAB849823784EFA00CFA657 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				9BAB849923784F2200CFA657 /* ServicesManagerTests.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -110,6 +208,26 @@
 			productReference = 9BAB845923783BAD00CFA657 /* MovieChat.app */;
 			productType = "com.apple.product-type.application";
 		};
+		9BAB848923784DFC00CFA657 /* MovieChatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BAB849323784DFC00CFA657 /* Build configuration list for PBXNativeTarget "MovieChatTests" */;
+			buildPhases = (
+				FA36BE6684125EA57AF38A86 /* [CP] Check Pods Manifest.lock */,
+				9BAB848623784DFC00CFA657 /* Sources */,
+				9BAB848723784DFC00CFA657 /* Frameworks */,
+				9BAB848823784DFC00CFA657 /* Resources */,
+				9BAB849C237856BB00CFA657 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9BAB849023784DFC00CFA657 /* PBXTargetDependency */,
+			);
+			name = MovieChatTests;
+			productName = MovieChatTests;
+			productReference = 9BAB848A23784DFC00CFA657 /* MovieChatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -122,6 +240,10 @@
 				TargetAttributes = {
 					9BAB845823783BAD00CFA657 = {
 						CreatedOnToolsVersion = 10.0;
+					};
+					9BAB848923784DFC00CFA657 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 9BAB845823783BAD00CFA657;
 					};
 				};
 			};
@@ -139,6 +261,7 @@
 			projectRoot = "";
 			targets = (
 				9BAB845823783BAD00CFA657 /* MovieChat */,
+				9BAB848923784DFC00CFA657 /* MovieChatTests */,
 			);
 		};
 /* End PBXProject section */
@@ -154,9 +277,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9BAB848823784DFC00CFA657 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		59947BEFDC3732A4F46E7D89 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MovieChat/Pods-MovieChat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MovieChat/Pods-MovieChat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MovieChat/Pods-MovieChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		75FFE26A2936AA98FE104AF6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -179,6 +326,44 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		9BAB849C237856BB00CFA657 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MovieChatTests/Pods-MovieChatTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MovieChatTests/Pods-MovieChatTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MovieChatTests/Pods-MovieChatTests-frameworks.sh\"\n";
+		};
+		FA36BE6684125EA57AF38A86 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MovieChatTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -188,10 +373,29 @@
 			files = (
 				9BAB845F23783BAD00CFA657 /* ViewController.swift in Sources */,
 				9BAB845D23783BAD00CFA657 /* AppDelegate.swift in Sources */,
+				9BAB84752378465D00CFA657 /* Movie.swift in Sources */,
+				9BAB8470237844D100CFA657 /* ServicesManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BAB848623784DFC00CFA657 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BAB849A23784F2200CFA657 /* ServicesManagerTests.swift in Sources */,
+				9BAB849723784E7B00CFA657 /* MovieTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9BAB849023784DFC00CFA657 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9BAB845823783BAD00CFA657 /* MovieChat */;
+			targetProxy = 9BAB848F23784DFC00CFA657 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		9BAB846023783BAD00CFA657 /* Main.storyboard */ = {
@@ -367,6 +571,48 @@
 			};
 			name = Release;
 		};
+		9BAB849123784DFC00CFA657 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB840A02CC34F839B7EE9B53 /* Pods-MovieChatTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6J86C6MHA9;
+				INFOPLIST_FILE = MovieChatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = FL.MovieChatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MovieChat.app/MovieChat";
+			};
+			name = Debug;
+		};
+		9BAB849223784DFC00CFA657 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D0BEA3F2716BB19119A2D4A /* Pods-MovieChatTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6J86C6MHA9;
+				INFOPLIST_FILE = MovieChatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = FL.MovieChatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MovieChat.app/MovieChat";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -384,6 +630,15 @@
 			buildConfigurations = (
 				9BAB846C23783BAD00CFA657 /* Debug */,
 				9BAB846D23783BAD00CFA657 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9BAB849323784DFC00CFA657 /* Build configuration list for PBXNativeTarget "MovieChatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BAB849123784DFC00CFA657 /* Debug */,
+				9BAB849223784DFC00CFA657 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

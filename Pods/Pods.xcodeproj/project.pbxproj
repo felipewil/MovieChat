@@ -3,125 +3,502 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		13C9081765B7CBB699C2F3817726E7EC /* Pods-MovieChat-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E60FAC6007B0AF9ED8F2483018AE3D22 /* Pods-MovieChat-dummy.m */; };
-		64EA64E65B128994024F536E94E5642C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		D6AF195D3C09D484DB1BE4C0BAA9F85F /* Pods-MovieChat-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AD4885C44C9ABE7B8143D215120C8D0A /* Pods-MovieChat-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0599BFCF965F2F2F209A4C7CEC044D0D /* OHHTTPStubsResponse+JSON.h in Headers */ = {isa = PBXBuildFile; fileRef = 76FA0EE67F8DBC04DE30503E29068D08 /* OHHTTPStubsResponse+JSON.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0C5E11DE24DAA737704B355F5F2F3426 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B4A4C1CED0CB36D5EC97108E4BE261 /* ParameterEncoding.swift */; };
+		132E0F619E4338E5D1B27E4C72076B3F /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AA5EC95770B9508A32EF41E1E17448 /* Notifications.swift */; };
+		1945CD5D63A1C164AEAAA9A33E85571E /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F3AA53B2E2B6FFFE778773AC48C64A3 /* Alamofire-dummy.m */; };
+		1986B50C74F1697EA43F68335C93CEB3 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E346FAC3FEEA48FEAD50BD92C8E40B3 /* MultipartFormData.swift */; };
+		1B3A6F59AF37FC641751E1CE6B166D07 /* OHHTTPStubs.m in Sources */ = {isa = PBXBuildFile; fileRef = E24E332943942553A563BF7F7310FBB8 /* OHHTTPStubs.m */; };
+		2C61B040BA6A9A7AE66C4D9BA26D5520 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CBB2C5EFCD5BAC03D49F290B77D209 /* SessionDelegate.swift */; };
+		3571F958A3907B3A806E62D50C2550D4 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DE4EFBD999A2672194CECEA01E7C19 /* NetworkReachabilityManager.swift */; };
+		366C293B4917804481F6557A4A8E9D0B /* OHPathHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = F53FA1C87669B2A8D7DA021E26B1E4A7 /* OHPathHelpers.m */; };
+		37BE153F911BE389F0B95646161A1550 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B079F294DA5D9A879E6D53A91F51A1E /* CFNetwork.framework */; };
+		3AFAE4DB951EBF38B22CBAE39D6C9CD4 /* Compatibility.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F179D7765CA6EF85D6917065E0D71D4 /* Compatibility.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		514AE356A98C918E9343BC3104BA622C /* OHHTTPStubs+NSURLSessionConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = E4525DE19F7D8E5C8BEF5D2C1AF8FD0D /* OHHTTPStubs+NSURLSessionConfiguration.m */; };
+		53791F5E5F07400F92CFDFC89A432305 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A815DA9A28E9C8DB2E9F46D0808E454 /* Validation.swift */; };
+		571C77086DA52BD3CD60799069A9E209 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 222DAEF0D819F359AFCFF3D4F927E8A7 /* Foundation.framework */; };
+		60B45CF20D84B42BC22A6E0929B95074 /* OHHTTPStubs-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B44B79BA20015A275972036DC2D5E1BE /* OHHTTPStubs-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		64744C911253C3E01461FAD7C935C8D7 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59270FFF018C7247E21DC05F82255F49 /* Result.swift */; };
+		6A6440F5AC13FC5E52903285A097184E /* OHHTTPStubsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 4887CDB15C3CB3344EFE63F4B946A64F /* OHHTTPStubsResponse.m */; };
+		6BFE4DF13693BBD7079B85D54428ECD6 /* Pods-MovieChat-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E35E86BF07F9A66420879755D392167E /* Pods-MovieChat-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7664FD4F59A0C00866CBAE60B0A3AD64 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 222DAEF0D819F359AFCFF3D4F927E8A7 /* Foundation.framework */; };
+		83956E20859CDBBE7BC38ABADE0170FB /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8BF00FB7DE450AF040C5879D38BD37 /* AFError.swift */; };
+		86AE5E8A6224F2FE2F8DCEE302DFBE0D /* Pods-MovieChatTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E89706C6338923763E7980D70276F27D /* Pods-MovieChatTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8EA8A2DD203621372025DB843DC37773 /* OHHTTPStubs-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EB77911CDD804F0A6073463B14C94FA5 /* OHHTTPStubs-dummy.m */; };
+		926E10CC0B496C45A44C3DE083D6BB6E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 222DAEF0D819F359AFCFF3D4F927E8A7 /* Foundation.framework */; };
+		931BBB8230A25161D5C37528A8F9FECF /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047162D97CA913331C43008757513FAF /* SessionManager.swift */; };
+		933FDA5970AA525D6CB92BFEBA2BAB4A /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D33CE1FC07B541588D24646BE469144 /* Timeline.swift */; };
+		98A929C8E9012AB167672714FFD2113C /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAD099AD0B1B183718BBAA1ED304011 /* Request.swift */; };
+		99799A03B392B1626663CDD776530E15 /* Pods-MovieChatTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7693117606E2CA8647715113687F2CFF /* Pods-MovieChatTests-dummy.m */; };
+		9AA9A85DA1870B7F9D31D4CFE8051B45 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 222DAEF0D819F359AFCFF3D4F927E8A7 /* Foundation.framework */; };
+		9FD97DBF7FE63B472A08D375AD40826D /* OHHTTPStubs.h in Headers */ = {isa = PBXBuildFile; fileRef = 3713FD029D7203060843FB67BC0438F6 /* OHHTTPStubs.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A871964C74275D66D41392AA7042E757 /* OHHTTPStubsMethodSwizzling.h in Headers */ = {isa = PBXBuildFile; fileRef = 59CDDDD67605F4CED9D242DE32C6BDC9 /* OHHTTPStubsMethodSwizzling.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		AFC64B1097F7355FF423D6A73E9C7210 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836B28429CE4A2ED3AB9C05B3A1A3668 /* TaskDelegate.swift */; };
+		BEE6B677416CA71C981D1D3F60B18C96 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304E6B7E80539F868F823826681AB936 /* Alamofire.swift */; };
+		C21134F89033A8A09D862B4C5259F5CE /* NSURLRequest+HTTPBodyTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E90CB0D556D12398C75AEDA02AFFB4C /* NSURLRequest+HTTPBodyTesting.m */; };
+		CE7AC0DE37DB957F577A604FADAEB4B7 /* OHHTTPStubsMethodSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = E3F1FDF91DACDFB8AEF1FC826246F59B /* OHHTTPStubsMethodSwizzling.m */; };
+		D3D8C379C6E4FB487E5ABD6800AD7B7E /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE261EBBCF65E12DECF06B120F21182 /* DispatchQueue+Alamofire.swift */; };
+		D53AF087F7578DC54A661F4B5D71CD5B /* OHHTTPStubsResponse+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = CBF8563F2B66F673E9C1C063CD16C4DA /* OHHTTPStubsResponse+JSON.m */; };
+		D65C254F5ABF2CB5ECEE50FE8F8E1A80 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0525B38A3832C4E6A71D7C7302547A79 /* Response.swift */; };
+		D7346078844032C56A7A4F39270D7177 /* NSURLRequest+HTTPBodyTesting.h in Headers */ = {isa = PBXBuildFile; fileRef = 01806E40A81FC53A550C75FC19A632B2 /* NSURLRequest+HTTPBodyTesting.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E3747EC31FCCA97D75A81FC700CF7E24 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BDA6C66B2B9774D4CC2E3DBA18CD10 /* ResponseSerialization.swift */; };
+		E8352EDB1B8E3D6EDBFA065EE0C2A442 /* Pods-MovieChat-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FA444006FC169B53B4F27009A580E646 /* Pods-MovieChat-dummy.m */; };
+		F13F2AA7F2E6D95A181CAB99B900D531 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177FABB47C54DE1F8514B469381E7843 /* ServerTrustPolicy.swift */; };
+		F7B74645E07C39771156A1FA413B98D4 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B67BEC928EF3329AD99FC63D102FF649 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F97A29C977B22A391237B414D55621DA /* OHHTTPStubsResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 36900DDED6A40C440DEB6289E0F5B177 /* OHHTTPStubsResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FA0A4E39D71793AEF2951C03E3DECE80 /* OHPathHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 110992420DDBA147573A5A910906BEA0 /* OHPathHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		00A360B4DED3E8367A76F72116296824 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A983A2D06C5B6AA3D6ABA5CCC0A16725;
+			remoteInfo = OHHTTPStubs;
+		};
+		55A1B7F3BBE1D815AD2C9740CF879ADD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EAAA1AD3A8A1B59AB91319EE40752C6D;
+			remoteInfo = Alamofire;
+		};
+		59EA059B572A383E8F00613BDEAAB2D4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F3C1C99C1A19F006E5B826E65F1067C7;
+			remoteInfo = "Pods-MovieChat";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		15B62A08489F224ABB234D33C577F349 /* Pods-MovieChat-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MovieChat-acknowledgements.plist"; sourceTree = "<group>"; };
-		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		521A97991DE71682B2C7E77EBD873EE8 /* Pods-MovieChat-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MovieChat-acknowledgements.markdown"; sourceTree = "<group>"; };
-		58338F2E8C9186778846A19D4D781A3C /* Pods-MovieChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MovieChat.debug.xcconfig"; sourceTree = "<group>"; };
+		01806E40A81FC53A550C75FC19A632B2 /* NSURLRequest+HTTPBodyTesting.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSURLRequest+HTTPBodyTesting.h"; path = "OHHTTPStubs/Sources/NSURLSession/NSURLRequest+HTTPBodyTesting.h"; sourceTree = "<group>"; };
+		01E5390583B224AB00352AA4CFBEC904 /* Pods-MovieChat-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MovieChat-acknowledgements.plist"; sourceTree = "<group>"; };
+		047162D97CA913331C43008757513FAF /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
+		0525B38A3832C4E6A71D7C7302547A79 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
+		110992420DDBA147573A5A910906BEA0 /* OHPathHelpers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OHPathHelpers.h; path = OHHTTPStubs/Sources/OHPathHelpers/OHPathHelpers.h; sourceTree = "<group>"; };
+		177FABB47C54DE1F8514B469381E7843 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
+		17B4A4C1CED0CB36D5EC97108E4BE261 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
+		17E33041B314FA837A3CAEB9DF3CDE9F /* OHHTTPStubs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = OHHTTPStubs.framework; path = OHHTTPStubs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		222DAEF0D819F359AFCFF3D4F927E8A7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		284FF3CECCC03B51A04D124AB3E6E675 /* Pods-MovieChatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MovieChatTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2E346FAC3FEEA48FEAD50BD92C8E40B3 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
+		304E6B7E80539F868F823826681AB936 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
+		36900DDED6A40C440DEB6289E0F5B177 /* OHHTTPStubsResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OHHTTPStubsResponse.h; path = OHHTTPStubs/Sources/OHHTTPStubsResponse.h; sourceTree = "<group>"; };
+		3713FD029D7203060843FB67BC0438F6 /* OHHTTPStubs.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OHHTTPStubs.h; path = OHHTTPStubs/Sources/OHHTTPStubs.h; sourceTree = "<group>"; };
+		3E90CB0D556D12398C75AEDA02AFFB4C /* NSURLRequest+HTTPBodyTesting.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSURLRequest+HTTPBodyTesting.m"; path = "OHHTTPStubs/Sources/NSURLSession/NSURLRequest+HTTPBodyTesting.m"; sourceTree = "<group>"; };
+		445B01C40B6B67D9D9FE43171AC4CC19 /* Pods-MovieChatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MovieChatTests.release.xcconfig"; sourceTree = "<group>"; };
+		47CE5DC224CE380AC17B96D53460AE08 /* Pods-MovieChatTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MovieChatTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		4887CDB15C3CB3344EFE63F4B946A64F /* OHHTTPStubsResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OHHTTPStubsResponse.m; path = OHHTTPStubs/Sources/OHHTTPStubsResponse.m; sourceTree = "<group>"; };
+		48B81DC78652D118B3BB60E697BA4841 /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
+		4CE9A635EF4DD0C1EB38A932B832296A /* OHHTTPStubs-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "OHHTTPStubs-Info.plist"; sourceTree = "<group>"; };
+		4D33CE1FC07B541588D24646BE469144 /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
+		4F179D7765CA6EF85D6917065E0D71D4 /* Compatibility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Compatibility.h; path = OHHTTPStubs/Sources/Compatibility.h; sourceTree = "<group>"; };
+		51CBB2C5EFCD5BAC03D49F290B77D209 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
+		5512F27D24E6F1CFE80C3B4ABEABA4F6 /* OHHTTPStubs.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = OHHTTPStubs.modulemap; sourceTree = "<group>"; };
+		59270FFF018C7247E21DC05F82255F49 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
+		59CDDDD67605F4CED9D242DE32C6BDC9 /* OHHTTPStubsMethodSwizzling.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OHHTTPStubsMethodSwizzling.h; path = OHHTTPStubs/Sources/NSURLSession/OHHTTPStubsMethodSwizzling.h; sourceTree = "<group>"; };
+		5A815DA9A28E9C8DB2E9F46D0808E454 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
+		5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F3AA53B2E2B6FFFE778773AC48C64A3 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
+		6EE261EBBCF65E12DECF06B120F21182 /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
 		711F2CA5CD52A44F9C4CD292BE67CFBF /* Pods_MovieChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MovieChat.framework; path = "Pods-MovieChat.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7C29F7369292C6CC10464C656388FE1F /* Pods-MovieChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MovieChat.release.xcconfig"; sourceTree = "<group>"; };
+		7693117606E2CA8647715113687F2CFF /* Pods-MovieChatTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MovieChatTests-dummy.m"; sourceTree = "<group>"; };
+		76FA0EE67F8DBC04DE30503E29068D08 /* OHHTTPStubsResponse+JSON.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "OHHTTPStubsResponse+JSON.h"; path = "OHHTTPStubs/Sources/JSON/OHHTTPStubsResponse+JSON.h"; sourceTree = "<group>"; };
+		78BDA6C66B2B9774D4CC2E3DBA18CD10 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
+		79DE4EFBD999A2672194CECEA01E7C19 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
+		7C8BF00FB7DE450AF040C5879D38BD37 /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
+		836B28429CE4A2ED3AB9C05B3A1A3668 /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
+		8B079F294DA5D9A879E6D53A91F51A1E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
+		8F83BFB00A71030CBBD123AD20E4D6DC /* Pods-MovieChatTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MovieChatTests-frameworks.sh"; sourceTree = "<group>"; };
+		9D60E089F87BE8C3722C2A778C7F5877 /* Pods-MovieChatTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MovieChatTests.modulemap"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		AD4885C44C9ABE7B8143D215120C8D0A /* Pods-MovieChat-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MovieChat-umbrella.h"; sourceTree = "<group>"; };
-		CE81047E40A7ABBF12AD173F5C8D68EF /* Pods-MovieChat-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MovieChat-Info.plist"; sourceTree = "<group>"; };
-		E345CA145C22E8F6A494BCFE9458DE2D /* Pods-MovieChat.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MovieChat.modulemap"; sourceTree = "<group>"; };
-		E60FAC6007B0AF9ED8F2483018AE3D22 /* Pods-MovieChat-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MovieChat-dummy.m"; sourceTree = "<group>"; };
+		AD3BBFBEDB02F9C252702C29411777BE /* Pods-MovieChat.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MovieChat.modulemap"; sourceTree = "<group>"; };
+		B44B79BA20015A275972036DC2D5E1BE /* OHHTTPStubs-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OHHTTPStubs-umbrella.h"; sourceTree = "<group>"; };
+		B59D3CB612E609FA5FF4BB8F34634855 /* Pods-MovieChat-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MovieChat-Info.plist"; sourceTree = "<group>"; };
+		B67BEC928EF3329AD99FC63D102FF649 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
+		B86924DB31B7CD9323CBE1FBDF1016A8 /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
+		BF173A3622A227B0F244BC5BCE869F35 /* Pods_MovieChatTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MovieChatTests.framework; path = "Pods-MovieChatTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFCE806CAD38702B29C53755677E48C5 /* Pods-MovieChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MovieChat.debug.xcconfig"; sourceTree = "<group>"; };
+		CBF8563F2B66F673E9C1C063CD16C4DA /* OHHTTPStubsResponse+JSON.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "OHHTTPStubsResponse+JSON.m"; path = "OHHTTPStubs/Sources/JSON/OHHTTPStubsResponse+JSON.m"; sourceTree = "<group>"; };
+		D6B2E5FCC668EECFC39AAA12BB4EFE22 /* Pods-MovieChat-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MovieChat-acknowledgements.markdown"; sourceTree = "<group>"; };
+		DA2B1F64B58E6CE6FCC5B083FD3B2A91 /* OHHTTPStubs-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OHHTTPStubs-prefix.pch"; sourceTree = "<group>"; };
+		DCD8912427C4A4B479FCC55FDDB3F10A /* Pods-MovieChat-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MovieChat-frameworks.sh"; sourceTree = "<group>"; };
+		E0777E516F59441F958585C1AF1602DE /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Alamofire.modulemap; sourceTree = "<group>"; };
+		E24E332943942553A563BF7F7310FBB8 /* OHHTTPStubs.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OHHTTPStubs.m; path = OHHTTPStubs/Sources/OHHTTPStubs.m; sourceTree = "<group>"; };
+		E35E86BF07F9A66420879755D392167E /* Pods-MovieChat-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MovieChat-umbrella.h"; sourceTree = "<group>"; };
+		E3F1FDF91DACDFB8AEF1FC826246F59B /* OHHTTPStubsMethodSwizzling.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OHHTTPStubsMethodSwizzling.m; path = OHHTTPStubs/Sources/NSURLSession/OHHTTPStubsMethodSwizzling.m; sourceTree = "<group>"; };
+		E4525DE19F7D8E5C8BEF5D2C1AF8FD0D /* OHHTTPStubs+NSURLSessionConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "OHHTTPStubs+NSURLSessionConfiguration.m"; path = "OHHTTPStubs/Sources/NSURLSession/OHHTTPStubs+NSURLSessionConfiguration.m"; sourceTree = "<group>"; };
+		E815E6B1D443127547B16A7863DE4CA7 /* Pods-MovieChatTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MovieChatTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E89706C6338923763E7980D70276F27D /* Pods-MovieChatTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MovieChatTests-umbrella.h"; sourceTree = "<group>"; };
+		EB77911CDD804F0A6073463B14C94FA5 /* OHHTTPStubs-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "OHHTTPStubs-dummy.m"; sourceTree = "<group>"; };
+		ED76995182161788D8D84EB17001C8A3 /* Pods-MovieChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MovieChat.release.xcconfig"; sourceTree = "<group>"; };
+		F53FA1C87669B2A8D7DA021E26B1E4A7 /* OHPathHelpers.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OHPathHelpers.m; path = OHHTTPStubs/Sources/OHPathHelpers/OHPathHelpers.m; sourceTree = "<group>"; };
+		F6AA5EC95770B9508A32EF41E1E17448 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
+		F70218D6FDB2BA02419CEF65D7EB3D83 /* OHHTTPStubs.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OHHTTPStubs.xcconfig; sourceTree = "<group>"; };
+		F816E64A84005768148B9D6799FACB3C /* Alamofire-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Alamofire-Info.plist"; sourceTree = "<group>"; };
+		FA444006FC169B53B4F27009A580E646 /* Pods-MovieChat-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MovieChat-dummy.m"; sourceTree = "<group>"; };
+		FAAD099AD0B1B183718BBAA1ED304011 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
+		FFFD5F9978098DCA50D734FE4E06D965 /* Pods-MovieChatTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MovieChatTests-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		87936FC6FD644AFDA01E0740FB51A230 /* Frameworks */ = {
+		090C1D63463ACF622287EFF9D5C9392D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64EA64E65B128994024F536E94E5642C /* Foundation.framework in Frameworks */,
+				7664FD4F59A0C00866CBAE60B0A3AD64 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2022C178809A8B84DB4E13EDDDA08FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				926E10CC0B496C45A44C3DE083D6BB6E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBE9351B93FE99E558BCCCCBA6277E64 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AA9A85DA1870B7F9D31D4CFE8051B45 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F85E9C7363B0839405F64D063BE830AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37BE153F911BE389F0B95646161A1550 /* CFNetwork.framework in Frameworks */,
+				571C77086DA52BD3CD60799069A9E209 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		10464C9349273DA490F11A813324BB28 /* Pods-MovieChat */ = {
+		03E7A7346407DD58C75EA680F020CD13 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				E345CA145C22E8F6A494BCFE9458DE2D /* Pods-MovieChat.modulemap */,
-				521A97991DE71682B2C7E77EBD873EE8 /* Pods-MovieChat-acknowledgements.markdown */,
-				15B62A08489F224ABB234D33C577F349 /* Pods-MovieChat-acknowledgements.plist */,
-				E60FAC6007B0AF9ED8F2483018AE3D22 /* Pods-MovieChat-dummy.m */,
-				CE81047E40A7ABBF12AD173F5C8D68EF /* Pods-MovieChat-Info.plist */,
-				AD4885C44C9ABE7B8143D215120C8D0A /* Pods-MovieChat-umbrella.h */,
-				58338F2E8C9186778846A19D4D781A3C /* Pods-MovieChat.debug.xcconfig */,
-				7C29F7369292C6CC10464C656388FE1F /* Pods-MovieChat.release.xcconfig */,
+				5512F27D24E6F1CFE80C3B4ABEABA4F6 /* OHHTTPStubs.modulemap */,
+				F70218D6FDB2BA02419CEF65D7EB3D83 /* OHHTTPStubs.xcconfig */,
+				EB77911CDD804F0A6073463B14C94FA5 /* OHHTTPStubs-dummy.m */,
+				4CE9A635EF4DD0C1EB38A932B832296A /* OHHTTPStubs-Info.plist */,
+				DA2B1F64B58E6CE6FCC5B083FD3B2A91 /* OHHTTPStubs-prefix.pch */,
+				B44B79BA20015A275972036DC2D5E1BE /* OHHTTPStubs-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/OHHTTPStubs";
+			sourceTree = "<group>";
+		};
+		0D9A7E131BF91A3E34FC578A8978B2BD /* OHHTTPStubs */ = {
+			isa = PBXGroup;
+			children = (
+				DF2D32291827DD65FA1DF22CF9DFB0E9 /* Core */,
+				79B291B31FC28FD3FEB3117CE0531AF6 /* JSON */,
+				206DE29AC0E7FF3C4667010165AF9AD9 /* NSURLSession */,
+				365D4043566820B0EAA730202EA099CF /* OHPathHelpers */,
+				03E7A7346407DD58C75EA680F020CD13 /* Support Files */,
+			);
+			name = OHHTTPStubs;
+			path = OHHTTPStubs;
+			sourceTree = "<group>";
+		};
+		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E34DCC8E2CF86B8D72232914781A840D /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		206DE29AC0E7FF3C4667010165AF9AD9 /* NSURLSession */ = {
+			isa = PBXGroup;
+			children = (
+				01806E40A81FC53A550C75FC19A632B2 /* NSURLRequest+HTTPBodyTesting.h */,
+				3E90CB0D556D12398C75AEDA02AFFB4C /* NSURLRequest+HTTPBodyTesting.m */,
+				E4525DE19F7D8E5C8BEF5D2C1AF8FD0D /* OHHTTPStubs+NSURLSessionConfiguration.m */,
+				59CDDDD67605F4CED9D242DE32C6BDC9 /* OHHTTPStubsMethodSwizzling.h */,
+				E3F1FDF91DACDFB8AEF1FC826246F59B /* OHHTTPStubsMethodSwizzling.m */,
+			);
+			name = NSURLSession;
+			sourceTree = "<group>";
+		};
+		365D4043566820B0EAA730202EA099CF /* OHPathHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				110992420DDBA147573A5A910906BEA0 /* OHPathHelpers.h */,
+				F53FA1C87669B2A8D7DA021E26B1E4A7 /* OHPathHelpers.m */,
+			);
+			name = OHPathHelpers;
+			sourceTree = "<group>";
+		};
+		4B0EC212DBEBD776A9AC356A911A8B2C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E0777E516F59441F958585C1AF1602DE /* Alamofire.modulemap */,
+				B86924DB31B7CD9323CBE1FBDF1016A8 /* Alamofire.xcconfig */,
+				5F3AA53B2E2B6FFFE778773AC48C64A3 /* Alamofire-dummy.m */,
+				F816E64A84005768148B9D6799FACB3C /* Alamofire-Info.plist */,
+				48B81DC78652D118B3BB60E697BA4841 /* Alamofire-prefix.pch */,
+				B67BEC928EF3329AD99FC63D102FF649 /* Alamofire-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Alamofire";
+			sourceTree = "<group>";
+		};
+		67B44ECF65C26195058E77BBF6883426 /* Pods-MovieChat */ = {
+			isa = PBXGroup;
+			children = (
+				AD3BBFBEDB02F9C252702C29411777BE /* Pods-MovieChat.modulemap */,
+				D6B2E5FCC668EECFC39AAA12BB4EFE22 /* Pods-MovieChat-acknowledgements.markdown */,
+				01E5390583B224AB00352AA4CFBEC904 /* Pods-MovieChat-acknowledgements.plist */,
+				FA444006FC169B53B4F27009A580E646 /* Pods-MovieChat-dummy.m */,
+				DCD8912427C4A4B479FCC55FDDB3F10A /* Pods-MovieChat-frameworks.sh */,
+				B59D3CB612E609FA5FF4BB8F34634855 /* Pods-MovieChat-Info.plist */,
+				E35E86BF07F9A66420879755D392167E /* Pods-MovieChat-umbrella.h */,
+				BFCE806CAD38702B29C53755677E48C5 /* Pods-MovieChat.debug.xcconfig */,
+				ED76995182161788D8D84EB17001C8A3 /* Pods-MovieChat.release.xcconfig */,
 			);
 			name = "Pods-MovieChat";
 			path = "Target Support Files/Pods-MovieChat";
 			sourceTree = "<group>";
 		};
-		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
+		79B291B31FC28FD3FEB3117CE0531AF6 /* JSON */ = {
 			isa = PBXGroup;
 			children = (
-				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
+				76FA0EE67F8DBC04DE30503E29068D08 /* OHHTTPStubsResponse+JSON.h */,
+				CBF8563F2B66F673E9C1C063CD16C4DA /* OHHTTPStubsResponse+JSON.m */,
 			);
-			name = iOS;
+			name = JSON;
+			sourceTree = "<group>";
+		};
+		A0235BA3921989D0D3A6047C40CFEF71 /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				7C8BF00FB7DE450AF040C5879D38BD37 /* AFError.swift */,
+				304E6B7E80539F868F823826681AB936 /* Alamofire.swift */,
+				6EE261EBBCF65E12DECF06B120F21182 /* DispatchQueue+Alamofire.swift */,
+				2E346FAC3FEEA48FEAD50BD92C8E40B3 /* MultipartFormData.swift */,
+				79DE4EFBD999A2672194CECEA01E7C19 /* NetworkReachabilityManager.swift */,
+				F6AA5EC95770B9508A32EF41E1E17448 /* Notifications.swift */,
+				17B4A4C1CED0CB36D5EC97108E4BE261 /* ParameterEncoding.swift */,
+				FAAD099AD0B1B183718BBAA1ED304011 /* Request.swift */,
+				0525B38A3832C4E6A71D7C7302547A79 /* Response.swift */,
+				78BDA6C66B2B9774D4CC2E3DBA18CD10 /* ResponseSerialization.swift */,
+				59270FFF018C7247E21DC05F82255F49 /* Result.swift */,
+				177FABB47C54DE1F8514B469381E7843 /* ServerTrustPolicy.swift */,
+				51CBB2C5EFCD5BAC03D49F290B77D209 /* SessionDelegate.swift */,
+				047162D97CA913331C43008757513FAF /* SessionManager.swift */,
+				836B28429CE4A2ED3AB9C05B3A1A3668 /* TaskDelegate.swift */,
+				4D33CE1FC07B541588D24646BE469144 /* Timeline.swift */,
+				5A815DA9A28E9C8DB2E9F46D0808E454 /* Validation.swift */,
+				4B0EC212DBEBD776A9AC356A911A8B2C /* Support Files */,
+			);
+			name = Alamofire;
+			path = Alamofire;
+			sourceTree = "<group>";
+		};
+		AE20667838FA68F80211F26413ECF013 /* Pods-MovieChatTests */ = {
+			isa = PBXGroup;
+			children = (
+				9D60E089F87BE8C3722C2A778C7F5877 /* Pods-MovieChatTests.modulemap */,
+				E815E6B1D443127547B16A7863DE4CA7 /* Pods-MovieChatTests-acknowledgements.markdown */,
+				47CE5DC224CE380AC17B96D53460AE08 /* Pods-MovieChatTests-acknowledgements.plist */,
+				7693117606E2CA8647715113687F2CFF /* Pods-MovieChatTests-dummy.m */,
+				8F83BFB00A71030CBBD123AD20E4D6DC /* Pods-MovieChatTests-frameworks.sh */,
+				FFFD5F9978098DCA50D734FE4E06D965 /* Pods-MovieChatTests-Info.plist */,
+				E89706C6338923763E7980D70276F27D /* Pods-MovieChatTests-umbrella.h */,
+				284FF3CECCC03B51A04D124AB3E6E675 /* Pods-MovieChatTests.debug.xcconfig */,
+				445B01C40B6B67D9D9FE43171AC4CC19 /* Pods-MovieChatTests.release.xcconfig */,
+			);
+			name = "Pods-MovieChatTests";
+			path = "Target Support Files/Pods-MovieChatTests";
+			sourceTree = "<group>";
+		};
+		B604574E07A82E951EB6169B17F39320 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A0235BA3921989D0D3A6047C40CFEF71 /* Alamofire */,
+				0D9A7E131BF91A3E34FC578A8978B2BD /* OHHTTPStubs */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CA4710608D6DADAE0041DD6CC86E4EB0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */,
+				17E33041B314FA837A3CAEB9DF3CDE9F /* OHHTTPStubs.framework */,
+				711F2CA5CD52A44F9C4CD292BE67CFBF /* Pods_MovieChat.framework */,
+				BF173A3622A227B0F244BC5BCE869F35 /* Pods_MovieChatTests.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				D2920764316E70E1246043AE4C02CF0E /* Products */,
-				E266E662BE48F6992DF18D1E5236744B /* Targets Support Files */,
+				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
+				B604574E07A82E951EB6169B17F39320 /* Pods */,
+				CA4710608D6DADAE0041DD6CC86E4EB0 /* Products */,
+				DD18D83943A6C7E39F3E6665D3CE96C1 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+		DD18D83943A6C7E39F3E6665D3CE96C1 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		D2920764316E70E1246043AE4C02CF0E /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				711F2CA5CD52A44F9C4CD292BE67CFBF /* Pods_MovieChat.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		E266E662BE48F6992DF18D1E5236744B /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				10464C9349273DA490F11A813324BB28 /* Pods-MovieChat */,
+				67B44ECF65C26195058E77BBF6883426 /* Pods-MovieChat */,
+				AE20667838FA68F80211F26413ECF013 /* Pods-MovieChatTests */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		DF2D32291827DD65FA1DF22CF9DFB0E9 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				4F179D7765CA6EF85D6917065E0D71D4 /* Compatibility.h */,
+				3713FD029D7203060843FB67BC0438F6 /* OHHTTPStubs.h */,
+				E24E332943942553A563BF7F7310FBB8 /* OHHTTPStubs.m */,
+				36900DDED6A40C440DEB6289E0F5B177 /* OHHTTPStubsResponse.h */,
+				4887CDB15C3CB3344EFE63F4B946A64F /* OHHTTPStubsResponse.m */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		E34DCC8E2CF86B8D72232914781A840D /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				8B079F294DA5D9A879E6D53A91F51A1E /* CFNetwork.framework */,
+				222DAEF0D819F359AFCFF3D4F927E8A7 /* Foundation.framework */,
+			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		049BE475CD5B9D04FC1EB2067F8F6BA7 /* Headers */ = {
+		2582784E4FA6A1AC5D23FC53AC3F6EE2 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6AF195D3C09D484DB1BE4C0BAA9F85F /* Pods-MovieChat-umbrella.h in Headers */,
+				F7B74645E07C39771156A1FA413B98D4 /* Alamofire-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7C352C11FAFABF6F77CB01D4AA9345A6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BFE4DF13693BBD7079B85D54428ECD6 /* Pods-MovieChat-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E508AE6A046A8EDB9FE48B629D3EA9C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AFAE4DB951EBF38B22CBAE39D6C9CD4 /* Compatibility.h in Headers */,
+				D7346078844032C56A7A4F39270D7177 /* NSURLRequest+HTTPBodyTesting.h in Headers */,
+				60B45CF20D84B42BC22A6E0929B95074 /* OHHTTPStubs-umbrella.h in Headers */,
+				9FD97DBF7FE63B472A08D375AD40826D /* OHHTTPStubs.h in Headers */,
+				A871964C74275D66D41392AA7042E757 /* OHHTTPStubsMethodSwizzling.h in Headers */,
+				0599BFCF965F2F2F209A4C7CEC044D0D /* OHHTTPStubsResponse+JSON.h in Headers */,
+				F97A29C977B22A391237B414D55621DA /* OHHTTPStubsResponse.h in Headers */,
+				FA0A4E39D71793AEF2951C03E3DECE80 /* OHPathHelpers.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A22CB3A53577F760C8A1E7B465F5B71E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86AE5E8A6224F2FE2F8DCEE302DFBE0D /* Pods-MovieChatTests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		F3C1C99C1A19F006E5B826E65F1067C7 /* Pods-MovieChat */ = {
+		1B246DFC58739A3A8A24A2C65654F762 /* Pods-MovieChatTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8B87701DA76064D0DCA487CAF77ADCD2 /* Build configuration list for PBXNativeTarget "Pods-MovieChat" */;
+			buildConfigurationList = 32DF523E69EBC569A11C339896A1AA63 /* Build configuration list for PBXNativeTarget "Pods-MovieChatTests" */;
 			buildPhases = (
-				049BE475CD5B9D04FC1EB2067F8F6BA7 /* Headers */,
-				95192822CAB3E8EBBC3EB1C8D19D7D7E /* Sources */,
-				87936FC6FD644AFDA01E0740FB51A230 /* Frameworks */,
-				89E1D09FAED79687B09F9A36D49C89AD /* Resources */,
+				A22CB3A53577F760C8A1E7B465F5B71E /* Headers */,
+				7530C9D88E992EFDBE5E84F07448AF01 /* Sources */,
+				A2022C178809A8B84DB4E13EDDDA08FC /* Frameworks */,
+				8F5A61998998B3FFF14CA69C5C0F6A7B /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				972DCBF810CC6872BBD8B641256D5771 /* PBXTargetDependency */,
+				886645C3A0589040AF7219306D41CD60 /* PBXTargetDependency */,
+			);
+			name = "Pods-MovieChatTests";
+			productName = "Pods-MovieChatTests";
+			productReference = BF173A3622A227B0F244BC5BCE869F35 /* Pods_MovieChatTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A983A2D06C5B6AA3D6ABA5CCC0A16725 /* OHHTTPStubs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C322931CDBB634810A9C89C9DB9C837F /* Build configuration list for PBXNativeTarget "OHHTTPStubs" */;
+			buildPhases = (
+				9E508AE6A046A8EDB9FE48B629D3EA9C /* Headers */,
+				075354FBA48BBC8D1602BACB029D554D /* Sources */,
+				F85E9C7363B0839405F64D063BE830AB /* Frameworks */,
+				444D392B4B716B23FA1CC3BC95FA3311 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OHHTTPStubs;
+			productName = OHHTTPStubs;
+			productReference = 17E33041B314FA837A3CAEB9DF3CDE9F /* OHHTTPStubs.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E4A5194ABAF7A4780609E0E581DA6B54 /* Build configuration list for PBXNativeTarget "Alamofire" */;
+			buildPhases = (
+				2582784E4FA6A1AC5D23FC53AC3F6EE2 /* Headers */,
+				2DDFD9AC10F181CD7130BDF5F9E0502B /* Sources */,
+				090C1D63463ACF622287EFF9D5C9392D /* Frameworks */,
+				473D3E892ABB6C798CFF290644259B34 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Alamofire;
+			productName = Alamofire;
+			productReference = 5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F3C1C99C1A19F006E5B826E65F1067C7 /* Pods-MovieChat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A200699C2494347CAE2B23F2B8064E4 /* Build configuration list for PBXNativeTarget "Pods-MovieChat" */;
+			buildPhases = (
+				7C352C11FAFABF6F77CB01D4AA9345A6 /* Headers */,
+				AFC7049248528974DAE4C75842A56785 /* Sources */,
+				EBE9351B93FE99E558BCCCCBA6277E64 /* Frameworks */,
+				00E582A745FB641AF30D37A7D1663098 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				01976AC7F8A384BA4F7BCCFC3216D787 /* PBXTargetDependency */,
 			);
 			name = "Pods-MovieChat";
 			productName = "Pods-MovieChat";
@@ -138,7 +515,7 @@
 				LastUpgradeCheck = 1100;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -146,17 +523,41 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = D2920764316E70E1246043AE4C02CF0E /* Products */;
+			productRefGroup = CA4710608D6DADAE0041DD6CC86E4EB0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */,
+				A983A2D06C5B6AA3D6ABA5CCC0A16725 /* OHHTTPStubs */,
 				F3C1C99C1A19F006E5B826E65F1067C7 /* Pods-MovieChat */,
+				1B246DFC58739A3A8A24A2C65654F762 /* Pods-MovieChatTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		89E1D09FAED79687B09F9A36D49C89AD /* Resources */ = {
+		00E582A745FB641AF30D37A7D1663098 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		444D392B4B716B23FA1CC3BC95FA3311 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		473D3E892ABB6C798CFF290644259B34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F5A61998998B3FFF14CA69C5C0F6A7B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -166,15 +567,84 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		95192822CAB3E8EBBC3EB1C8D19D7D7E /* Sources */ = {
+		075354FBA48BBC8D1602BACB029D554D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13C9081765B7CBB699C2F3817726E7EC /* Pods-MovieChat-dummy.m in Sources */,
+				C21134F89033A8A09D862B4C5259F5CE /* NSURLRequest+HTTPBodyTesting.m in Sources */,
+				514AE356A98C918E9343BC3104BA622C /* OHHTTPStubs+NSURLSessionConfiguration.m in Sources */,
+				8EA8A2DD203621372025DB843DC37773 /* OHHTTPStubs-dummy.m in Sources */,
+				1B3A6F59AF37FC641751E1CE6B166D07 /* OHHTTPStubs.m in Sources */,
+				CE7AC0DE37DB957F577A604FADAEB4B7 /* OHHTTPStubsMethodSwizzling.m in Sources */,
+				D53AF087F7578DC54A661F4B5D71CD5B /* OHHTTPStubsResponse+JSON.m in Sources */,
+				6A6440F5AC13FC5E52903285A097184E /* OHHTTPStubsResponse.m in Sources */,
+				366C293B4917804481F6557A4A8E9D0B /* OHPathHelpers.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DDFD9AC10F181CD7130BDF5F9E0502B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83956E20859CDBBE7BC38ABADE0170FB /* AFError.swift in Sources */,
+				1945CD5D63A1C164AEAAA9A33E85571E /* Alamofire-dummy.m in Sources */,
+				BEE6B677416CA71C981D1D3F60B18C96 /* Alamofire.swift in Sources */,
+				D3D8C379C6E4FB487E5ABD6800AD7B7E /* DispatchQueue+Alamofire.swift in Sources */,
+				1986B50C74F1697EA43F68335C93CEB3 /* MultipartFormData.swift in Sources */,
+				3571F958A3907B3A806E62D50C2550D4 /* NetworkReachabilityManager.swift in Sources */,
+				132E0F619E4338E5D1B27E4C72076B3F /* Notifications.swift in Sources */,
+				0C5E11DE24DAA737704B355F5F2F3426 /* ParameterEncoding.swift in Sources */,
+				98A929C8E9012AB167672714FFD2113C /* Request.swift in Sources */,
+				D65C254F5ABF2CB5ECEE50FE8F8E1A80 /* Response.swift in Sources */,
+				E3747EC31FCCA97D75A81FC700CF7E24 /* ResponseSerialization.swift in Sources */,
+				64744C911253C3E01461FAD7C935C8D7 /* Result.swift in Sources */,
+				F13F2AA7F2E6D95A181CAB99B900D531 /* ServerTrustPolicy.swift in Sources */,
+				2C61B040BA6A9A7AE66C4D9BA26D5520 /* SessionDelegate.swift in Sources */,
+				931BBB8230A25161D5C37528A8F9FECF /* SessionManager.swift in Sources */,
+				AFC64B1097F7355FF423D6A73E9C7210 /* TaskDelegate.swift in Sources */,
+				933FDA5970AA525D6CB92BFEBA2BAB4A /* Timeline.swift in Sources */,
+				53791F5E5F07400F92CFDFC89A432305 /* Validation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7530C9D88E992EFDBE5E84F07448AF01 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99799A03B392B1626663CDD776530E15 /* Pods-MovieChatTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFC7049248528974DAE4C75842A56785 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8352EDB1B8E3D6EDBFA065EE0C2A442 /* Pods-MovieChat-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		01976AC7F8A384BA4F7BCCFC3216D787 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			target = EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */;
+			targetProxy = 55A1B7F3BBE1D815AD2C9740CF879ADD /* PBXContainerItemProxy */;
+		};
+		886645C3A0589040AF7219306D41CD60 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-MovieChat";
+			target = F3C1C99C1A19F006E5B826E65F1067C7 /* Pods-MovieChat */;
+			targetProxy = 59EA059B572A383E8F00613BDEAAB2D4 /* PBXContainerItemProxy */;
+		};
+		972DCBF810CC6872BBD8B641256D5771 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OHHTTPStubs;
+			target = A983A2D06C5B6AA3D6ABA5CCC0A16725 /* OHHTTPStubs */;
+			targetProxy = 00A360B4DED3E8367A76F72116296824 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		131356BE54884448CA49C07BEDF4BB2A /* Debug */ = {
@@ -241,9 +711,48 @@
 			};
 			name = Debug;
 		};
-		9E51914AAB0E8465C0749A336EE8D3E1 /* Debug */ = {
+		21518FE9A51AE981E94E8AF6A86922FB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 58338F2E8C9186778846A19D4D781A3C /* Pods-MovieChat.debug.xcconfig */;
+			baseConfigurationReference = ED76995182161788D8D84EB17001C8A3 /* Pods-MovieChat.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MovieChat/Pods-MovieChat-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MovieChat/Pods-MovieChat.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		22CFAE56F506B095E722124AF8E6B05C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFCE806CAD38702B29C53755677E48C5 /* Pods-MovieChat.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -279,9 +788,9 @@
 			};
 			name = Debug;
 		};
-		E85AE41FDF01F62FD5FC60BA8EE34D8F /* Release */ = {
+		359133FC5B2CD18DE1B6957D0C06C887 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7C29F7369292C6CC10464C656388FE1F /* Pods-MovieChat.release.xcconfig */;
+			baseConfigurationReference = 284FF3CECCC03B51A04D124AB3E6E675 /* Pods-MovieChatTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -294,7 +803,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-MovieChat/Pods-MovieChat-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-MovieChatTests/Pods-MovieChatTests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -303,7 +812,152 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-MovieChat/Pods-MovieChat.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-MovieChatTests/Pods-MovieChatTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		427CC76C4A0D2313B395E0BB95F76060 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B86924DB31B7CD9323CBE1FBDF1016A8 /* Alamofire.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alamofire/Alamofire-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				PRODUCT_MODULE_NAME = Alamofire;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7728D4E6B7939453C68FD14ACBCD254E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F70218D6FDB2BA02419CEF65D7EB3D83 /* OHHTTPStubs.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/OHHTTPStubs/OHHTTPStubs-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/OHHTTPStubs/OHHTTPStubs-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/OHHTTPStubs/OHHTTPStubs.modulemap";
+				PRODUCT_MODULE_NAME = OHHTTPStubs;
+				PRODUCT_NAME = OHHTTPStubs;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		96C891B8697E2C73BABA85937639DFF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B86924DB31B7CD9323CBE1FBDF1016A8 /* Alamofire.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alamofire/Alamofire-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				PRODUCT_MODULE_NAME = Alamofire;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E2325BED35ADEEE86B427F85EA2EE699 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 445B01C40B6B67D9D9FE43171AC4CC19 /* Pods-MovieChatTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MovieChatTests/Pods-MovieChatTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MovieChatTests/Pods-MovieChatTests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -378,9 +1032,62 @@
 			};
 			name = Release;
 		};
+		F194AF3E9298662BC6D2A7545020D893 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F70218D6FDB2BA02419CEF65D7EB3D83 /* OHHTTPStubs.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/OHHTTPStubs/OHHTTPStubs-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/OHHTTPStubs/OHHTTPStubs-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/OHHTTPStubs/OHHTTPStubs.modulemap";
+				PRODUCT_MODULE_NAME = OHHTTPStubs;
+				PRODUCT_NAME = OHHTTPStubs;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		32DF523E69EBC569A11C339896A1AA63 /* Build configuration list for PBXNativeTarget "Pods-MovieChatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				359133FC5B2CD18DE1B6957D0C06C887 /* Debug */,
+				E2325BED35ADEEE86B427F85EA2EE699 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A200699C2494347CAE2B23F2B8064E4 /* Build configuration list for PBXNativeTarget "Pods-MovieChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22CFAE56F506B095E722124AF8E6B05C /* Debug */,
+				21518FE9A51AE981E94E8AF6A86922FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -390,11 +1097,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8B87701DA76064D0DCA487CAF77ADCD2 /* Build configuration list for PBXNativeTarget "Pods-MovieChat" */ = {
+		C322931CDBB634810A9C89C9DB9C837F /* Build configuration list for PBXNativeTarget "OHHTTPStubs" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9E51914AAB0E8465C0749A336EE8D3E1 /* Debug */,
-				E85AE41FDF01F62FD5FC60BA8EE34D8F /* Release */,
+				F194AF3E9298662BC6D2A7545020D893 /* Debug */,
+				7728D4E6B7939453C68FD14ACBCD254E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E4A5194ABAF7A4780609E0E581DA6B54 /* Build configuration list for PBXNativeTarget "Alamofire" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				427CC76C4A0D2313B395E0BB95F76060 /* Debug */,
+				96C891B8697E2C73BABA85937639DFF2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
