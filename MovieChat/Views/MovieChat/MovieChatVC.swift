@@ -35,6 +35,7 @@ class MovieChatVC : UIViewController {
         super.viewDidLoad()
         
         setUpObservers()
+        setupGestureRecoginzers()
         applyVisuals()
         
         presenter.delegate = self
@@ -49,6 +50,10 @@ class MovieChatVC : UIViewController {
         
         commentTextView.text = ""
         submitCommentButton.isEnabled = false
+    }
+    
+    @objc func hideKeyboard() {
+        commentTextView.resignFirstResponder()
     }
     
     // MARK: Notifications
@@ -112,6 +117,11 @@ class MovieChatVC : UIViewController {
         commentTextViewContainerView.layer.cornerRadius = 8.0
         commentTextViewContainerView.layer.borderWidth = 1.5
         commentTextViewContainerView.layer.borderColor = UIColor.gray.cgColor
+    }
+    
+    private func setupGestureRecoginzers() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        tableView.addGestureRecognizer(tapGesture)
     }
     
     private func scrollToBottom() {
