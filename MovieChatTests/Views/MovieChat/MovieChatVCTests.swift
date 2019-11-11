@@ -47,7 +47,8 @@ class MovieChatVCTests: XCTestCase {
         
         let movie = Movie(json: [:])
         presenterMock = MovieChatPresenterMock(movie: movie,
-                                               databaseManager: nil)
+                                               databaseManager: nil,
+                                               userDefaults: nil)
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         viewController = storyboard.instantiateViewController(withIdentifier: "MovieChatVC") as? MovieChatVC

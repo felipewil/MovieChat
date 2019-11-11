@@ -19,6 +19,7 @@ class MovieChatPresenter {
     
     var movie: Movie!
     var databaseManager: DatabaseManager!
+    var userDefaults: UserDefaults!
     
     // MARK: Properties
     
@@ -29,24 +30,42 @@ class MovieChatPresenter {
     
     class func defaultManager(movie: Movie) -> MovieChatPresenter {
         return MovieChatPresenter(movie: movie,
-                                  databaseManager: .defaultManager())
+                                  databaseManager: .defaultManager(),
+                                  userDefaults: .standard)
     }
     
     init(movie: Movie,
-         databaseManager: DatabaseManager!) {
+         databaseManager: DatabaseManager!,
+         userDefaults: UserDefaults!) {
         self.movie = movie
         self.databaseManager = databaseManager
+        self.userDefaults = userDefaults
         self.comments = []
     }
     
     // MARK: Delegate methods
     
     func delegateDidLoad() {
-        #warning("TO DO")
+        databaseManager.addListenerForComments(on: movie) { [ weak self ] success, comments in
+            guard let self = self else { return }
+
+            self.comments.append(contentsOf: comments ?? [])
+            self.delegate?.refreshComments()
+        }
     }
     
     func delegateWantsToSaveComment(_ comment: String) {
-        #warning("TO DO")
+        guard let userData = userDefaults.value(forKey: "currentUser") as? Data else {
+            return
+        }
+        guard let user = try? PropertyListDecoder().decode(User.self, from: userData) else {
+            return
+        }
+        
+        var comment = Comment(content: comment)
+        comment.user = user
+
+        databaseManager.saveComment(comment, on: movie)
     }
     
     // MARK: DataSource
@@ -62,6 +81,19 @@ class MovieChatPresenter {
     /// - Returns: a Comment instance.
     func comment(atRow row: Int) -> Comment {
         return comments[row]
+    }
+    
+    func isCommentFromCurrentUser(_ comment: Comment) -> Bool {
+        return comment.user?.name == currentUser()?.name
+    }
+    
+    // MARK: Helpers
+    
+    private func currentUser() -> User? {
+        guard let userData = userDefaults.value(forKey: "currentUser") as? Data else {
+            return nil
+        }
+        return try? PropertyListDecoder().decode(User.self, from: userData)
     }
     
 }

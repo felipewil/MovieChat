@@ -31,10 +31,12 @@
 		9BAB84BB23789A3700CFA657 /* MovieChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAB84BA23789A3700CFA657 /* MovieChatVC.swift */; };
 		9BAB84BD23789A4F00CFA657 /* MovieChatPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAB84BC23789A4F00CFA657 /* MovieChatPresenter.swift */; };
 		9BAB84C023789D1A00CFA657 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAB84BF23789D1A00CFA657 /* CommentCell.swift */; };
+		9BAB84C22378B4E600CFA657 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAB84C12378B4E600CFA657 /* User.swift */; };
 		9BAB84C92378ED5C00CFA657 /* DatabaseManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAB84C82378ED5C00CFA657 /* DatabaseManagerTests.swift */; };
 		9BAB84CB2378FA3700CFA657 /* CommentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAB84CA2378FA3700CFA657 /* CommentTests.swift */; };
 		9BAB84CE2378FDF000CFA657 /* MovieChatPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAB84CD2378FDF000CFA657 /* MovieChatPresenterTests.swift */; };
 		9BAB84D02378FE7E00CFA657 /* MovieChatVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAB84CF2378FE7E00CFA657 /* MovieChatVCTests.swift */; };
+		9BAB84D3237907FA00CFA657 /* UIImage+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAB84D2237907FA00CFA657 /* UIImage+Color.swift */; };
 		E18151AD64374B87EDAD953F /* Pods_MovieChatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE4AA8F9F84D9C85119D977 /* Pods_MovieChatTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -82,10 +84,12 @@
 		9BAB84BA23789A3700CFA657 /* MovieChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieChatVC.swift; sourceTree = "<group>"; };
 		9BAB84BC23789A4F00CFA657 /* MovieChatPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieChatPresenter.swift; sourceTree = "<group>"; };
 		9BAB84BF23789D1A00CFA657 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		9BAB84C12378B4E600CFA657 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9BAB84C82378ED5C00CFA657 /* DatabaseManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManagerTests.swift; sourceTree = "<group>"; };
 		9BAB84CA2378FA3700CFA657 /* CommentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTests.swift; sourceTree = "<group>"; };
 		9BAB84CD2378FDF000CFA657 /* MovieChatPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieChatPresenterTests.swift; sourceTree = "<group>"; };
 		9BAB84CF2378FE7E00CFA657 /* MovieChatVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieChatVCTests.swift; sourceTree = "<group>"; };
+		9BAB84D2237907FA00CFA657 /* UIImage+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Color.swift"; sourceTree = "<group>"; };
 		DB840A02CC34F839B7EE9B53 /* Pods-MovieChatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieChatTests.debug.xcconfig"; path = "Target Support Files/Pods-MovieChatTests/Pods-MovieChatTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -153,6 +157,7 @@
 		9BAB845B23783BAD00CFA657 /* MovieChat */ = {
 			isa = PBXGroup;
 			children = (
+				9BAB84D1237907E800CFA657 /* Extensions */,
 				9BAB846E23783DC100CFA657 /* Business */,
 				9BAB8476237846AE00CFA657 /* Views */,
 				9BAB845C23783BAD00CFA657 /* AppDelegate.swift */,
@@ -188,6 +193,7 @@
 			children = (
 				9BAB84742378465D00CFA657 /* Movie.swift */,
 				9BAB84B72378986300CFA657 /* Comment.swift */,
+				9BAB84C12378B4E600CFA657 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -319,6 +325,14 @@
 				9BAB84CF2378FE7E00CFA657 /* MovieChatVCTests.swift */,
 			);
 			path = MovieChat;
+			sourceTree = "<group>";
+		};
+		9BAB84D1237907E800CFA657 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9BAB84D2237907FA00CFA657 /* UIImage+Color.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -513,7 +527,9 @@
 				9BAB84A42378694600CFA657 /* MovieListPresenter.swift in Sources */,
 				9BAB84A72378695300CFA657 /* MovieCell.swift in Sources */,
 				9BAB84A12378675100CFA657 /* WelcomePresenter.swift in Sources */,
+				9BAB84C22378B4E600CFA657 /* User.swift in Sources */,
 				9BAB84752378465D00CFA657 /* Movie.swift in Sources */,
+				9BAB84D3237907FA00CFA657 /* UIImage+Color.swift in Sources */,
 				9BAB84B82378986300CFA657 /* Comment.swift in Sources */,
 				9BAB849F2378645500CFA657 /* WelcomeVC.swift in Sources */,
 				9BAB84A52378694600CFA657 /* MovieListVC.swift in Sources */,

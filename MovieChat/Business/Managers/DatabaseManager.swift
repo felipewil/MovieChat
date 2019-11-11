@@ -46,6 +46,7 @@ class DatabaseManager {
         firestore.collection("movies")
             .document(movieTitle)
             .collection("comments")
+            .order(by: "insertTimestamp")
             .addSnapshotListener({ snapshot, error in
                 guard error == nil, let documents = snapshot?.documentChanges else {
                     handler(false, nil)

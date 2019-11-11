@@ -46,7 +46,7 @@ class WelcomeVCTests: XCTestCase {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
         
-        presenterMock = WelcomePresenterMock()
+        presenterMock = WelcomePresenterMock(userDefaults: nil)
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         viewController = storyboard.instantiateViewController(withIdentifier: "WelcomeVC") as? WelcomeVC
