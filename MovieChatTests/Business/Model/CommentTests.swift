@@ -16,10 +16,25 @@ class CommentTests: XCTestCase {
         let json = [ "content": "Some_content" ]
         
         // When
-        let movie = Comment(json: json)
+        let comment = Comment(json: json)
         
         // Then
-        XCTAssertEqual(movie.content, "Some_content")
+        XCTAssertEqual(comment.content, "Some_content")
+    }
+    
+    func testModelShouldBeMappedToJson() {
+        // Given
+        var comment = Comment(content: "comment")
+        comment.user = User(name: "name")
+        
+        // When
+        let json = comment.toJSON()
+        
+        // Then
+        XCTAssertEqual(json["content"] as! String, "comment")
+        
+        let userJson = json["user"] as! [ String: String ]
+        XCTAssertEqual(userJson["name"], "name")
     }
 
 }

@@ -9,7 +9,8 @@
 import Foundation
 
 protocol MovieChatPresenterDelegate : class {
-    func showError()
+    func showLoadError()
+    func showCommentError()
     func refreshComments()
 }
 
@@ -19,7 +20,7 @@ class MovieChatPresenter {
     
     var movie: Movie!
     var databaseManager: DatabaseManager!
-    var userDefaults: UserDefaults!
+    var loginManager: LoginManager!
     
     // MARK: Properties
     
@@ -31,15 +32,15 @@ class MovieChatPresenter {
     class func defaultManager(movie: Movie) -> MovieChatPresenter {
         return MovieChatPresenter(movie: movie,
                                   databaseManager: .defaultManager(),
-                                  userDefaults: .standard)
+                                  loginManager: .defaultManager())
     }
     
     init(movie: Movie,
          databaseManager: DatabaseManager!,
-         userDefaults: UserDefaults!) {
+         loginManager: LoginManager!) {
         self.movie = movie
         self.databaseManager = databaseManager
-        self.userDefaults = userDefaults
+        self.loginManager = loginManager
         self.comments = []
     }
     
@@ -48,6 +49,10 @@ class MovieChatPresenter {
     func delegateDidLoad() {
         databaseManager.addListenerForComments(on: movie) { [ weak self ] success, comments in
             guard let self = self else { return }
+            guard success else {
+                self.delegate?.showLoadError()
+                return
+            }
 
             self.comments.append(contentsOf: comments ?? [])
             self.delegate?.refreshComments()
@@ -55,10 +60,8 @@ class MovieChatPresenter {
     }
     
     func delegateWantsToSaveComment(_ comment: String) {
-        guard let userData = userDefaults.value(forKey: "currentUser") as? Data else {
-            return
-        }
-        guard let user = try? PropertyListDecoder().decode(User.self, from: userData) else {
+        guard let user = loginManager.currentUser() else {
+            delegate?.showCommentError()
             return
         }
         
@@ -83,17 +86,10 @@ class MovieChatPresenter {
         return comments[row]
     }
     
+    /// Checkes if the given comment belongs to the current user.
+    /// - Parameter comment: a Comment instance to be checked.
     func isCommentFromCurrentUser(_ comment: Comment) -> Bool {
-        return comment.user?.name == currentUser()?.name
-    }
-    
-    // MARK: Helpers
-    
-    private func currentUser() -> User? {
-        guard let userData = userDefaults.value(forKey: "currentUser") as? Data else {
-            return nil
-        }
-        return try? PropertyListDecoder().decode(User.self, from: userData)
+        return comment.user?.name == loginManager.currentUser()?.name
     }
     
 }

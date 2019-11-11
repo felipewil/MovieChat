@@ -34,6 +34,10 @@ private class MovieChatPresenterMock : MovieChatPresenter {
         return commentAtRowStub
     }
     
+    override func isCommentFromCurrentUser(_ comment: Comment) -> Bool {
+        return false
+    }
+    
 }
 
 class MovieChatVCTests: XCTestCase {
@@ -48,7 +52,7 @@ class MovieChatVCTests: XCTestCase {
         let movie = Movie(json: [:])
         presenterMock = MovieChatPresenterMock(movie: movie,
                                                databaseManager: nil,
-                                               userDefaults: nil)
+                                               loginManager: nil)
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         viewController = storyboard.instantiateViewController(withIdentifier: "MovieChatVC") as? MovieChatVC

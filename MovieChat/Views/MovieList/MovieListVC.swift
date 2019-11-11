@@ -65,6 +65,8 @@ class MovieListVC : UIViewController {
     // MARK: Apply visuals
     
     private func applyVisuals() {
+        title = "Movies"
+        
         tableView.alpha = 0.0
         errorView.alpha = 0.0
         loadingView.alpha = 1.0
