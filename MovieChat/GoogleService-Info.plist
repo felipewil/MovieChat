@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1001973472672-2pckjbp194he9l6kik0onr70t213v0op.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1001973472672-2pckjbp194he9l6kik0onr70t213v0op</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBMIG4jlDqnyCx1rfeStjaqgodGEo8nJ_o</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1001973472672</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>FL.MovieChat</string>
+	<key>PROJECT_ID</key>
+	<string>testproject-26601</string>
+	<key>STORAGE_BUCKET</key>
+	<string>testproject-26601.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1001973472672:ios:755f21e475d4b02b1518c5</string>
+	<key>DATABASE_URL</key>
+	<string>https://testproject-26601.firebaseio.com</string>
+</dict>
+</plist>
