@@ -21,6 +21,11 @@ private class MovieListPresenterMock : MovieListPresenter {
         delegateWantsToReloadMoviesCalls += 1
     }
     
+    var delegateDidSelectMovieCalls = 0
+    override func delegateDidSelectMovie(atRow row: Int) {
+        delegateDidSelectMovieCalls += 1
+    }
+    
     var numberOfMoviesCalls = 0
     override func numberOfMovies() -> Int {
         numberOfMoviesCalls += 1
@@ -31,6 +36,14 @@ private class MovieListPresenterMock : MovieListPresenter {
     override func movie(atRow row: Int) -> Movie {
         movieAtRowCalls += 1
         return Movie(json: [:])
+    }
+    
+}
+
+private class UINavigationControllerMock : UINavigationController {
+    
+    override func pushViewController(_ viewController: UIViewController, animated: Bool) {
+        viewControllers.append(viewController)
     }
     
 }
@@ -56,6 +69,7 @@ class MovieListVCTests: XCTestCase {
 
     override func tearDown() {
         viewController = nil
+        presenterMock = nil
         
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
@@ -112,6 +126,37 @@ class MovieListVCTests: XCTestCase {
         // Then
         XCTAssertTrue(cell is MovieCell)
         XCTAssertEqual(presenterMock.movieAtRowCalls, 1)
+    }
+    
+    // MARK: - UITableViewDelegate tests
+    
+    func testRowSelectedShouldWarnPresenter() {
+        // Given
+        let indexPath = IndexPath(row: 0, section: 0)
+        
+        // When
+        viewController.tableView(viewController.tableView, didSelectRowAt: indexPath)
+        
+        // Then
+        XCTAssertEqual(presenterMock.delegateDidSelectMovieCalls, 1)
+    }
+    
+    // MARK: - MovieListPresenterDelegate tests
+    
+    func testShowChatShouldSegueToMovieChat() {
+        // Given
+        let navVC = UINavigationControllerMock(rootViewController: viewController)
+        
+        XCTAssertEqual(navVC.viewControllers.count, 1)
+        
+        // When
+        viewController.showChat(for: Movie(json: [:]))
+        
+        // Then
+        XCTAssertEqual(navVC.viewControllers.count, 2)
+        XCTAssertTrue(navVC.viewControllers.last! is MovieChatVC)
+        
+        navVC.viewControllers = []
     }
     
 }
