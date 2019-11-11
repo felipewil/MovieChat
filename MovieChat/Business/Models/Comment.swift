@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import FirebaseFirestore
 
 struct Comment {
     
@@ -19,10 +20,17 @@ struct Comment {
     
     init(json: [ String: Any ]) {
         self.content = json["content"] as? String
+        
+        guard let userJson = json["user"] as? [ String: Any ] else { return }
+        self.user = User(json: userJson)
     }
     
     func toJSON() -> [ String: Any ] {
-        return [ "content": content ?? "" ]
+        return [
+            "content": content ?? "",
+            "insertTimestamp": FieldValue.serverTimestamp(),
+            "user": user?.toJSON() ?? ""
+        ]
     }
     
 }

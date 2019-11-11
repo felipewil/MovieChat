@@ -23,7 +23,7 @@ class WelcomeVC : UIViewController {
     
     // MARK: Properties
     
-    lazy var presenter = WelcomePresenter()
+    lazy var presenter = WelcomePresenter.defaultPresenter()
     
     // MARK: Life cycle
     
@@ -42,6 +42,8 @@ class WelcomeVC : UIViewController {
     }
     
     @IBAction func enterButtonTapped() {
+        let name = nameTextField.text ?? ""
+        presenter.delegateDidEnter(withName: name)
         performSegue(withIdentifier: movieListSegue, sender: nil)
     }
     // MARK: Helpers

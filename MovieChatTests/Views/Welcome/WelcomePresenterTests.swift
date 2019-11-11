@@ -25,7 +25,7 @@ class WelcomePresenterTests: XCTestCase {
     func testEnterShouldBeEnabledIfNameIsThreOrMoreCharacters() {
         // Given
         let delegateMock = WelcomePresenterDelegateMock()
-        let presenter = WelcomePresenter()
+        let presenter = WelcomePresenter(userDefaults: nil)
         presenter.delegate = delegateMock
         
         // When

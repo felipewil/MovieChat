@@ -95,8 +95,11 @@ class MovieChatVC : UIViewController {
         submitCommentButton.titleLabel?.font = .systemFont(ofSize: 17.0, weight: .semibold)
         submitCommentButton.setTitle("+ Submit", for: .normal)
         submitCommentButton.setTitleColor(.white, for: .normal)
-        submitCommentButton.backgroundColor = .black
+        submitCommentButton.setBackgroundImage(.from(.black), for: .normal)
+        submitCommentButton.setBackgroundImage(.from(.gray), for: .disabled)
         submitCommentButton.layer.cornerRadius = 8.0
+        submitCommentButton.layer.masksToBounds = true
+        submitCommentButton.isEnabled = false
         
         commentTextViewContainerView.layer.masksToBounds = true
         commentTextViewContainerView.layer.cornerRadius = 8.0
@@ -116,8 +119,11 @@ extension MovieChatVC : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let comment = presenter.comment(atRow: indexPath.row)
+        let isCurrentUser = presenter.isCommentFromCurrentUser(comment)
         let cell = CommentCell.dequeueReusableCell(from: tableView,
-                                                   for: comment)
+                                                   for: comment,
+                                                   isCurrentUser: isCurrentUser)
+        cell.selectionStyle = .none
         
         return cell
     }
@@ -165,6 +171,12 @@ extension MovieChatVC : MovieChatPresenterDelegate {
     
     func refreshComments() {
         tableView.reloadData()
+        
+        let numberOfRows = presenter.numberOfComments()
+        guard numberOfRows > 0 else { return }
+        
+        let indexPath = IndexPath(row: numberOfRows - 1, section: 0)
+        tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
     }
     
 }
