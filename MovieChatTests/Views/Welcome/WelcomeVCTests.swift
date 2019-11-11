@@ -18,21 +18,26 @@ private class WelcomePresenterMock : WelcomePresenter {
         delegateDidUpdateNameLastValue = name
     }
     
-}
-
-private class UINavigationControllerMock : UINavigationController {
-    
-    override func pushViewController(_ viewController: UIViewController, animated: Bool) {
-        viewControllers.append(viewController)
+    var delegateDidEnterCalls = 0
+    override func delegateDidEnter(withName name: String) {
+        delegateDidEnterCalls += 1
     }
     
 }
 
 private class WelcomeVCMock : WelcomeVC {
     
+    var performSegueCalls = 0
+    var performSegueLastIdentifier: String!
+    override func performSegue(withIdentifier identifier: String, sender: Any?) {
+        performSegueCalls += 1
+        performSegueLastIdentifier = identifier
+    }
+    
     var enterButtonTappedCalls = 0
     override func enterButtonTapped() {
         enterButtonTappedCalls += 1
+        super.enterButtonTapped()
     }
     
 }
@@ -46,7 +51,7 @@ class WelcomeVCTests: XCTestCase {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
         
-        presenterMock = WelcomePresenterMock(userDefaults: nil)
+        presenterMock = WelcomePresenterMock(loginManager: nil)
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         viewController = storyboard.instantiateViewController(withIdentifier: "WelcomeVC") as? WelcomeVC
@@ -79,20 +84,30 @@ class WelcomeVCTests: XCTestCase {
         XCTAssertEqual(presenterMock.delegateDidUpdateNameLastValue, "some_text")
     }
     
-    func testEnterButtonTappedShouldSegueToMovieList() {
+    func testEnterButtonTappedShouldWarnPresenter() {
         // Given
-        let navVC = UINavigationControllerMock(rootViewController: viewController)
-        
-        XCTAssertEqual(navVC.viewControllers.count, 1)
+        // Initial state
         
         // When
         viewController.enterButtonTapped()
         
         // Then
-        XCTAssertEqual(navVC.viewControllers.count, 2)
-        XCTAssertTrue(navVC.viewControllers.last! is MovieListVC)
+        XCTAssertEqual(presenterMock.delegateDidEnterCalls, 1)
+    }
+    
+    func testEnterButtonTappedShouldSegueToMovieList() {
+        // Given
+        let textField = UITextField(frame: .zero)
+        let viewController = WelcomeVCMock()
+        viewController.presenter = presenterMock
+        viewController.nameTextField = textField
+                
+        // When
+        viewController.enterButtonTapped()
         
-        navVC.viewControllers = []
+        // Then
+        XCTAssertEqual(viewController.performSegueCalls, 1)
+        XCTAssertEqual(viewController.performSegueLastIdentifier, "MovieListSegue")
     }
     
     // MARK: - WelcomePresenterDelegate tests
@@ -123,6 +138,8 @@ class WelcomeVCTests: XCTestCase {
         let button = UIButton(frame: .zero)
         button.isEnabled = true
         
+        viewController.nameTextField = textField
+        viewController.presenter = presenterMock
         viewController.enterButton = button
         
         // When

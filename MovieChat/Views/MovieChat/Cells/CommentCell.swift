@@ -88,7 +88,7 @@ class CommentCell : UITableViewCell {
         setUpPictureImageView(myPictureImageView, backgroundView: myPictureBackgroundView, backgroundColor: .darkGray)
         
         commentLabel.font = .systemFont(ofSize: 17.0)
-        authorLabel.font = .systemFont(ofSize: 13.0, weight: .semibold)
+        authorLabel.font = .systemFont(ofSize: 11.0, weight: .semibold)
     }
     
     private func setUpPictureImageView(_ pictureImageView: UIImageView, backgroundView: UIView, backgroundColor: UIColor) {

@@ -58,12 +58,19 @@ class MovieChatVC : UIViewController {
             let kbFrame = info[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect,
             let animationDuration = info[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double {
             
+            let tableViewHeight = tableView.bounds.size.height
+            let abc = tableView.contentSize.height - tableView.contentOffset.y
+            let shouldScrollToBottom = abc <= tableViewHeight
+            
             view.layoutIfNeeded()
             commentViewBottomConstraint.constant = kbFrame.height
             
             UIView.animate(withDuration: animationDuration) {
                 self.view.layoutIfNeeded()
             }
+            
+            guard shouldScrollToBottom else { return }
+            scrollToBottom()
         }
     }
     
@@ -105,6 +112,14 @@ class MovieChatVC : UIViewController {
         commentTextViewContainerView.layer.cornerRadius = 8.0
         commentTextViewContainerView.layer.borderWidth = 1.5
         commentTextViewContainerView.layer.borderColor = UIColor.gray.cgColor
+    }
+    
+    private func scrollToBottom() {
+        let numberOfRows = presenter.numberOfComments()
+        guard numberOfRows > 0 else { return }
+        
+        let indexPath = IndexPath(row: numberOfRows - 1, section: 0)
+        tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
     }
     
 }
@@ -159,24 +174,35 @@ extension MovieChatVC : UITableViewDelegate {
 
 extension MovieChatVC : MovieChatPresenterDelegate {
     
-    func showError() {
-        let alertVC = UIAlertController(title: "Could not load movie chat", message: "Pleasy try again", preferredStyle: .alert)
-        let dismissAction = UIAlertAction(title: "OK", style: .default) { _ in
+    func showLoadError() {
+        showAlert(title: "Could not load movie chat",
+                  message: "Pleasy try again") {
             self.navigationController?.popViewController(animated: true)
         }
-        
-        alertVC.addAction(dismissAction)
-        present(alertVC, animated: true, completion: nil)
+    }
+    
+    func showCommentError() {
+        showAlert(title: "Could not send comment",
+                  message: "Pleasy try again")
     }
     
     func refreshComments() {
         tableView.reloadData()
+        scrollToBottom()
+    }
+    
+    // MARK: Helpers
+    
+    private func showAlert(title: String, message: String, action: (() -> Void)? = nil) {
+        let alertVC = UIAlertController(title: title,
+                                        message: message,
+                                        preferredStyle: .alert)
+        let dismissAction = UIAlertAction(title: "OK", style: .default) { _ in
+            action?()
+        }
         
-        let numberOfRows = presenter.numberOfComments()
-        guard numberOfRows > 0 else { return }
-        
-        let indexPath = IndexPath(row: numberOfRows - 1, section: 0)
-        tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
+        alertVC.addAction(dismissAction)
+        present(alertVC, animated: true, completion: nil)
     }
     
 }

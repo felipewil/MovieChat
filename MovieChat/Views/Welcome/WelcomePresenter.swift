@@ -20,7 +20,7 @@ class WelcomePresenter {
     
     // MARK: Dependencies
     
-    var userDefaults: UserDefaults!
+    var loginManager: LoginManager!
     
     // MARK: Properties
     
@@ -29,11 +29,11 @@ class WelcomePresenter {
     // MARK: Initializers
     
     class func defaultPresenter() -> WelcomePresenter {
-        return WelcomePresenter(userDefaults: .standard)
+        return WelcomePresenter(loginManager: .defaultManager())
     }
     
-    init(userDefaults: UserDefaults!) {
-        self.userDefaults = userDefaults
+    init(loginManager: LoginManager!) {
+        self.loginManager = loginManager
     }
     
     // MARK: Delegate methods
@@ -45,9 +45,7 @@ class WelcomePresenter {
     
     func delegateDidEnter(withName name: String) {
         let user = User(name: name)
-        let encodedUser = try? PropertyListEncoder().encode(user)
-        
-        userDefaults.set(encodedUser, forKey: Consts.currentUserKey)
+        loginManager.setCurrentUser(user)
     }
     
 }

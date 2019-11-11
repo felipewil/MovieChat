@@ -20,13 +20,45 @@ private class WelcomePresenterDelegateMock : WelcomePresenterDelegate {
     
 }
 
+private class LoginManagerMock : LoginManager {
+    
+    var setCurrentUserCalls = 0
+    var setCurrentUserLastValue: User!
+    override func setCurrentUser(_ user: User) {
+        setCurrentUserCalls += 1
+        setCurrentUserLastValue = user
+    }
+    
+}
+
 class WelcomePresenterTests: XCTestCase {
 
+    var presenter: WelcomePresenter!
+    private var delegateMock: WelcomePresenterDelegateMock!
+    private var loginManagerMock: LoginManagerMock!
+    
+    override func setUp() {
+        super.setUp()
+        
+        delegateMock = WelcomePresenterDelegateMock()
+        loginManagerMock = LoginManagerMock(userDefaults: nil)
+        
+        presenter = WelcomePresenter(loginManager: loginManagerMock)
+        presenter.delegate = delegateMock
+    }
+    
+    override func tearDown() {
+        presenter = nil
+        delegateMock = nil
+        
+        super.tearDown()
+    }
+    
+    // MARK: - Delegate methods tests
+    
     func testEnterShouldBeEnabledIfNameIsThreOrMoreCharacters() {
         // Given
-        let delegateMock = WelcomePresenterDelegateMock()
-        let presenter = WelcomePresenter(userDefaults: nil)
-        presenter.delegate = delegateMock
+        // Initial state
         
         // When
         presenter.delegateDidUpdateName("")
@@ -48,6 +80,18 @@ class WelcomePresenterTests: XCTestCase {
         // Then
         XCTAssertEqual(delegateMock.enableEnterCalls, 3)
         XCTAssertTrue(delegateMock.enableEnterLastValue)
+    }
+    
+    func testDelegateDidEnterShouldSaveUser() {
+        // Given
+        // Initial state
+        
+        // When
+        presenter.delegateDidEnter(withName: "some_name")
+        
+        // Then
+        XCTAssertEqual(loginManagerMock.setCurrentUserCalls, 1)
+        XCTAssertEqual(loginManagerMock.setCurrentUserLastValue.name, "some_name")
     }
 
 }

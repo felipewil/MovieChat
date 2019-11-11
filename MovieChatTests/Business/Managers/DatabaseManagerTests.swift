@@ -22,6 +22,18 @@ private class FirestoreMock : Firestore {
     
 }
 
+private class QueryMock : Query {
+    
+    init(dummy: Any?) {}
+    
+    var handler: FIRQuerySnapshotBlock!
+    override func addSnapshotListener(_ listener: @escaping FIRQuerySnapshotBlock) -> ListenerRegistration {
+        handler = listener
+        return ListenerMock()
+    }
+    
+}
+
 private class DocumentReferenceMock : DocumentReference {
     
     init(dummy: Any?) {}
@@ -42,12 +54,6 @@ private class CollectionReferenceMock : CollectionReference {
     
     init(dummy: Any?) {}
     
-    var handler: FIRQuerySnapshotBlock!
-    override func addSnapshotListener(_ listener: @escaping FIRQuerySnapshotBlock) -> ListenerRegistration {
-        handler = listener
-        return ListenerMock()
-    }
-    
     var documentStub: DocumentReference!
     override func document(_ documentPath: String) -> DocumentReference {
         return documentStub
@@ -57,6 +63,11 @@ private class CollectionReferenceMock : CollectionReference {
     override func addDocument(data: [String : Any]) -> DocumentReference {
         addDocumentLastValue = data
         return documentStub
+    }
+    
+    var queryStub: Query!
+    override func order(by field: String) -> Query {
+        return queryStub
     }
     
 }
@@ -120,9 +131,11 @@ class DatabaseManagerTests: XCTestCase {
         let movieDocument = DocumentReferenceMock(dummy: nil)
         let moviesCollection = CollectionReferenceMock(dummy: nil)
         let commentsCollection = CollectionReferenceMock(dummy: nil)
+        let queryMock = QueryMock(dummy: nil)
         
         moviesCollection.documentStub = movieDocument
         movieDocument.collectionStub = commentsCollection
+        commentsCollection.queryStub = queryMock
         firestoreMock.collectionStub = moviesCollection
         
         let movie = Movie(json: [ "title": "Some_title" ])
@@ -133,7 +146,7 @@ class DatabaseManagerTests: XCTestCase {
         }
         
         // When
-        commentsCollection.handler(nil, NSError(domain: "", code: 0, userInfo: nil))
+        queryMock.handler(nil, NSError(domain: "", code: 0, userInfo: nil))
     }
     
     func testReturnedDataShouldBeMappedToComments() {
@@ -141,9 +154,11 @@ class DatabaseManagerTests: XCTestCase {
         let movieDocument = DocumentReferenceMock(dummy: nil)
         let moviesCollection = CollectionReferenceMock(dummy: nil)
         let commentsCollection = CollectionReferenceMock(dummy: nil)
-        
+        let queryMock = QueryMock(dummy: nil)
+
         moviesCollection.documentStub = movieDocument
         movieDocument.collectionStub = commentsCollection
+        commentsCollection.queryStub = queryMock
         firestoreMock.collectionStub = moviesCollection
         
         let querySnapshot1 = QueryDocumentSnapshotMock(dummy: nil)
@@ -167,7 +182,7 @@ class DatabaseManagerTests: XCTestCase {
         }
         
         // When
-        commentsCollection.handler(snapshot, nil)
+        queryMock.handler(snapshot, nil)
     }
     
     func testSaveComment() {
@@ -175,7 +190,7 @@ class DatabaseManagerTests: XCTestCase {
         let movieDocument = DocumentReferenceMock(dummy: nil)
         let moviesCollection = CollectionReferenceMock(dummy: nil)
         let commentsCollection = CollectionReferenceMock(dummy: nil)
-        
+
         moviesCollection.documentStub = movieDocument
         movieDocument.collectionStub = commentsCollection
         commentsCollection.documentStub = DocumentReferenceMock(dummy: nil)
@@ -190,8 +205,8 @@ class DatabaseManagerTests: XCTestCase {
         movieDocument.setDataCompletion(nil)
         
         // When
-        let expectedValue = [ "content": "some_comment" ]
-        XCTAssertEqual(commentsCollection.addDocumentLastValue as! [ String: String ], expectedValue)
+        let savedDocument = commentsCollection.addDocumentLastValue!
+        XCTAssertEqual(savedDocument["content"] as! String, "some_comment")
     }
 
 }
