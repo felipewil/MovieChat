@@ -32,6 +32,10 @@ private class MovieListPresenterDelegateMock : MovieListPresenterDelegate {
         refreshMoviesCalls += 1
     }
     
+    var showChatCalls = 0
+    func showChat(for movie: Movie) {
+        showChatCalls += 1
+    }
     
 }
 
@@ -105,6 +109,21 @@ class MovieListPresenterTests: XCTestCase {
         // Then
         XCTAssertEqual(delegateMock.showErrorCalls, 0)
         XCTAssertEqual(delegateMock.refreshMoviesCalls, 1)
+    }
+    
+    func testDelegateDidSelectMovieShouldWarnDelegateToShowChat() {
+        // Given
+        let movie = Movie(json: [:])
+        let result = [ movie ]
+        
+        presenter.delegateDidLoad()
+        servicesManagerMock.requestMoviesHandler(true, result)
+        
+        // When
+        presenter.delegateDidSelectMovie(atRow: 0)
+        
+        // Then
+        XCTAssertEqual(delegateMock.showChatCalls, 1)
     }
 
     // MARK: DataSource

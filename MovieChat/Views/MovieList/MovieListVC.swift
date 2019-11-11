@@ -8,6 +8,8 @@
 
 import UIKit
 
+private let movieChatSegue = "MovieChatSegue"
+
 class MovieListVC : UIViewController {
     
     private struct Consts {
@@ -52,6 +54,14 @@ class MovieListVC : UIViewController {
         applyVisuals()
     }
     
+    // MARK: Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let movieChatVC = segue.destination as? MovieChatVC {
+            movieChatVC.movie = sender as? Movie
+        }
+    }
+    
     // MARK: Apply visuals
     
     private func applyVisuals() {
@@ -82,6 +92,17 @@ extension MovieListVC : UITableViewDataSource {
     
 }
 
+// MARK: - UITableViewDelegate
+
+extension MovieListVC : UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
+        presenter.delegateDidSelectMovie(atRow: indexPath.row)
+    }
+    
+}
+
 // MARK: - MovieListPresenterDelegate
 
 extension MovieListVC : MovieListPresenterDelegate {
@@ -106,6 +127,10 @@ extension MovieListVC : MovieListPresenterDelegate {
             self.loadingView.alpha = 0.0
             self.errorView.alpha = 1.0
         }
+    }
+    
+    func showChat(for movie: Movie) {
+        performSegue(withIdentifier: movieChatSegue, sender: movie)
     }
     
 }

@@ -11,6 +11,7 @@ import Foundation
 protocol MovieListPresenterDelegate : class {
     func showError()
     func refreshMovies()
+    func showChat(for movie: Movie)
 }
 
 class MovieListPresenter {
@@ -45,6 +46,11 @@ class MovieListPresenter {
         requestMovies()
     }
     
+    func delegateDidSelectMovie(atRow row: Int) {
+        let movie = movies[row]
+        delegate?.showChat(for: movie)
+    }
+    
     // MARK: DataSource
     
     /// The number of movies returned by the request.
@@ -61,7 +67,7 @@ class MovieListPresenter {
     }
     
     // MARK: Helpers
-    var test = 0
+    
     private func requestMovies() {
         servicesManager.requestMovies { [ weak self ] success, movies in
             guard let self = self else { return }
